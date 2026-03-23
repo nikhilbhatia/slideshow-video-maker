@@ -39,9 +39,15 @@ LAYOUT = {
 
 def load_font(size: int):
     for path in [
+        # macOS
         "/System/Library/Fonts/Helvetica.ttc",
         "/System/Library/Fonts/Arial.ttf",
         "/Library/Fonts/Arial.ttf",
+        # Linux (Streamlit Cloud / Ubuntu)
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
     ]:
         if os.path.exists(path):
             try:
